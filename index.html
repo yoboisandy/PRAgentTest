@@ -10,5 +10,26 @@
     <h2>Article Title</h2>
     <p>Article Content</p>
   </div>
+  <script>
+    const articles = [
+      { title: 'Article Title', content: 'Article Content' },
+      // add more articles here
+    ];
+
+    articles.forEach(article => {
+      const articleDiv = document.createElement('div');
+      articleDiv.className = 'article';
+
+      const title = document.createElement('h2');
+      title.textContent = article.title;
+      articleDiv.appendChild(title);
+
+      const content = document.createElement('p');
+      content.textContent = article.content;
+      articleDiv.appendChild(content);
+
+      document.body.appendChild(articleDiv);
+    });
+  </script>
 </body>
 </html>
